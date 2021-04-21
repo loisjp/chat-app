@@ -1,4 +1,11 @@
+* {
+  margin: 0; 
+}
+
 body {
+  --coodash-color: #1A2833;
+  overflow: hidden;
+
   margin: 0;
   font-family: 'Lato';
   -webkit-font-smoothing: antialiased;
