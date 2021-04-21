@@ -8,6 +8,7 @@ import ChatInput from "./ChatInput";
 import { useCollection, useDocument } from "react-firebase-hooks/firestore";
 import { db } from '../firebase';
 import Message from './Message';
+import DropZone from './DropZone';
 
 function Chat() {
     const chatRef = useRef(null);
@@ -68,12 +69,12 @@ function Chat() {
                         })}
                         <ChatBottom ref={chatRef} />
                     </ChatMessages>
-
                     <ChatInput
                         chatRef={chatRef}
                         channelName={roomDetails?.data().name}
                         channelId={roomId}
                     />
+                    <DropZone />
                 </>
             )}
         </ChatContainer>
@@ -93,9 +94,7 @@ const Header = styled.div`
     border-bottom: 1px solid lightgray;
 `;
 
-const ChatMessages = styled.div`
-
-`;
+const ChatMessages = styled.div``;
 
 const HeaderLeft = styled.div`
     display: flex;
